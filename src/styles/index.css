@@ -152,7 +152,7 @@ body > article:first-of-type:not([class="intro"]) {
 }
 
 .intro {
-	margin: 0 auto 6em;
+	margin: 10em auto 4em;
 	width: 90%;
 }
 
