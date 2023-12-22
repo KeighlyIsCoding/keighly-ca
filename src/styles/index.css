@@ -86,7 +86,7 @@ body {
 	width: 100%;
 }
 
-/* Check Var Font Support */
+/* Check Variable Font Support */
 @supports (font-variation-settings: "wght" 500) {
 	body {
 		font-family: var(--main-font);
@@ -110,6 +110,7 @@ nav {
 
 nav > h1 {
 	margin-bottom: 0.75em;
+
 	text-transform: uppercase;
 	letter-spacing: 5px;
 }
@@ -120,6 +121,7 @@ nav > ul a:visited,
 nav > ul a:hover,
 nav > ul a:active {
 	padding: 0 0.4em;
+
 	color: var(--font-color);
 	text-decoration: none;
 	font-size: var(--base-size);
@@ -146,23 +148,20 @@ nav > ul li:hover::after {
 	transition: width 0.3s;
 }
 
-body > article:first-of-type,
-body > article:first-of-type:not([class="intro"]) {
-	margin-top: 11em;
-}
-
 .intro {
-	margin: 10em auto 4em;
+	margin: 10em auto 0;
 	width: 90%;
 }
 
 .intro h1 {
 	margin-bottom: 0.3em;
+
 	letter-spacing: 2px;
 }
 
 .intro h2 {
 	margin-bottom: 0.3em;
+
 	font-size: var(--h4);
 	--main-font-wght: 450;
 	letter-spacing: 2px;
@@ -170,6 +169,7 @@ body > article:first-of-type:not([class="intro"]) {
 
 .intro h3 {
 	margin-bottom: 2em;
+
 	font-size: var(--h5);
 	--main-font-wght: 300;
 	letter-spacing: 1px;
@@ -177,140 +177,91 @@ body > article:first-of-type:not([class="intro"]) {
 
 .intro p {
 	margin-bottom: 0.5em;
+
 	letter-spacing: 1px;
 }
 
-.skills div {
-	flex: 100%;
+.intro p,
+.skills h3,
+.skills p,
+.date-skills-container p,
+.desc-container p {
+	--main-font-wght: 400;
 }
 
-.skills p {
-	text-align: center;
-	font-size: var(--h6);
+body > div > article:not(:first-of-type) {
+	margin-top: 3.5em;
 }
 
-body > article:not([class="intro"]) {
-	margin: 0 auto;
-	margin-top: 1em;
-	max-width: 80%;
-	text-align: center;
-	letter-spacing: 5px;
-}
-
-body > article:not([class="intro"]) {
-	margin-bottom: 4em;
-}
-
-article:not([class="intro"]) h1,
-article:not([class="intro"]) h2,
-article:not([class="intro"]) h3 {
+article:not(.intro) h1,
+article:not(.intro) h2,
+article:not(.intro) h3 {
 	text-align: center;
 	text-transform: uppercase;
+
 	letter-spacing: 5px;
-}
-
-body > article:not([class="intro"]) h2 + h3 {
-	margin-top: 1em;
-	margin-bottom: 3em;
-	--main-font-wght: 300;
-	text-transform: uppercase;
-}
-
-body > article:not([class="intro"]) h2 + p {
-	margin: auto;
-	margin-top: 2em;
-	letter-spacing: 1px;
-	line-height: 1.5em;
 }
 
 article > article,
 article > section {
 	display: flex;
-}
-
-article > article {
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: flex-start;
-	margin: 3em 0;
-}
-
-article > section {
-	flex-flow: column wrap;
+	flex-flow: column;
 	align-content: center;
-	margin: 2em auto;
-	letter-spacing: 2px;
-}
 
-section > div h3 {
-	margin-bottom: 1.3em;
-	font-size: var(--h5);
-	--main-font-wght: 400;
-}
-
-section > div:not(:first-of-type) {
 	margin-top: 2em;
 }
 
-article > section h4 {
-	margin-top: .7em;
+.skills > section > div {
+	flex: 100%;
+}
+
+.skills > section > div:not(:first-of-type) {
+	margin-top: 2em;
+}
+
+.skills h3 {
+	margin-bottom: 1.3em;
+
+	font-size: var(--h5);
+}
+
+.skills p {
+	text-align: center;
 	font-size: var(--h6);
-	--main-font-wght: 300;
-}
-
-article > div > div {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	margin-top: 1em;
-}
-
-article > div + div {
-	min-width: 90%;
-}
-
-article > div + div h3 a {
-	font-size: var(--h2);
-	--main-font-wght: 400;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-}
-
-article > div + div h4 {
-	margin-top: 1em;
-	--main-font-wght: 200;
 	letter-spacing: 2px;
 }
 
-article > div + div p {
-	margin-top: 1.5em;
-	letter-spacing: 2px;
-	line-height: 1.6em;
+.projects {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-article > div + div a {
-	padding: 0.3em;
-	border: 2px solid var(--accent-color);
-	color: var(--accent-color);
+.project {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: auto auto;
+
+	margin-top: 2em;
 }
 
-article > div + div h3 a:hover,
-article > div + div a:hover {
-	color: var(--main-color);
-	background-color: var(--accent-color);
+.project:last-of-type {
+	margin-bottom: 3em;
 }
 
 .thumb {
 	position: relative;
-	/* margin-left: 2em; */
-	/* margin-right: 2em; */
-	/* width: 300px; */
-	width: 150px;
-	/* height: 300px; */
-	height: 150px;
-	clip-path: polygon(50% 2%, 0% 70%, 100% 70%);
+	justify-self: center;
+	width: 100px;
+	height: 100px;
+	/*clip-path: polygon(50% 2%, 0% 70%, 100% 70%);*/
 	background: var(--font-color);
 	transition: transform 1s;
+}
+
+.thumb img {
+	height: 100%;
+	width: 100%;
 }
 
 .thumb .overlay {
@@ -320,7 +271,6 @@ article > div + div a:hover {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: 2px solid var(--accent-color);
 	color: var(--accent-color);
 	text-align: center;
 }
@@ -331,9 +281,71 @@ article > div + div a:hover {
 }
 
 .thumb-txt {
+	width: 90%;
 	margin-top: 40%;
-	border: 2px solid var(--accent-color);
+	margin-left: auto;
+	margin-right: auto;
+
+	border-top: 2px solid var(--accent-color);
+	border-bottom: 2px solid var(--accent-color);
+
 	text-transform: uppercase;
+}
+
+.info-container {
+	grid-column: 2/3;
+	grid-row: 1/2;
+
+	display: flex;
+	flex-direction: row;
+	flex-flow: column;
+	margin-left: 1em;
+}
+
+.info-container h3 {
+	margin-top: .4em;
+	align-self: flex-start;
+	text-align: left;
+	font-size: var(--h6);
+}
+
+.info-container > .date-skills-container {
+	margin-top: auto;
+}
+
+.info-container p {
+	letter-spacing: 2px;
+	line-height: 1.8em;
+}
+
+.info-container a {
+	padding: 0.3em;
+	border: 2px solid var(--accent-color);
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+.info-container h3 a:hover,
+.info-container a:hover {
+	color: var(--main-color);
+	background-color: var(--accent-color);
+}
+
+.desc-container {
+	grid-column: 1/3;
+	grid-row: 2/3;
+
+	margin-top: .75em;
+
+	letter-spacing: 1px;
+}
+
+.desc-container p {
+	line-height: 1.25em;
+}
+
+.desc-container p:not(:first-child) {
+	margin-top: .6em;
 }
 
 /*
@@ -349,14 +361,8 @@ article > div + div a:hover {
 		--main-font-wght: 400;
 	}
 
-	body > article:first-of-type,
-	body > article:first-of-type:not([class="intro"]) {
+	body > div > article:first-of-type {
 		margin-top: 16em;
-	}
-
-	.intro {
-		margin-top: 16em;
-		margin-bottom: 10em;
 		width: 80%;
 	}
 
@@ -364,53 +370,79 @@ article > div + div a:hover {
 		margin-bottom: 0.7em;
 	}
 
-	.skills > section > div {
-		flex: 50%;
-		margin-bottom: 5em;
+	.intro p,
+	.desc-container p {
+		font-size: var(--p);
 	}
 
-	body > article:not([class="intro"]) {
-		margin-bottom: 8em;
+	.intro p,
+	.skills h3,
+	.project p {
+		--main-font-wght: 500;
 	}
 
-	article > section {
+	body > div > article:not(:first-of-type) {
+		margin-top: 5em;
+	}
+
+	.skills > section {
 		flex-flow: row wrap;
-		justify-content: space-around;
-		max-width: 70%;
-		margin: 3.5em auto;
-		letter-spacing: 1px;
 	}
 
-	section > div:not(:first-of-type) {
+	.skills > section > div:not(:first-of-type) {
 		margin: 0;
 	}
 
-	section > div h3 {
-		margin-bottom: 2em;
+	.skills > section > div:nth-child(n+3) {
+		margin-top: 2.25em;
+	}
+
+	.skills > section > div {
+		flex: 50%;
+	}
+
+	.skills h3 {
+		margin-bottom: 1.25em;
 		font-size: var(--h6);
-	--main-font-wght: 500;
 	}
 
-	article > section h4 {
-		margin-top: .7em;
-		font-size: var(--p);
-	--main-font-wght: 400;
-		letter-spacing: 2px;
+	.skills p {
+		--main-font-wght: 450;
 	}
 
-	body > article:not([class="intro"]) h2 + p {
-    margin-top: 3em;
-    letter-spacing: 1px;
-    line-height: 1.8em;
+	.project {
+		display: grid;
+		grid-template-columns: 1fr 4fr;
+		grid-template-rows: auto auto;
+
+		margin-top: 3em;
 	}
 
-	article > div + div h3 a {
-		font-size: var(--h3);
+	.project:last-of-type {
+		margin-bottom: 4em;
 	}
 
 	.thumb {
-		width: 250px;
-		height: 250px;
+		height: 150px;
+		width: 150px;
+	}
+
+	.info-container h3 {
+		margin-top: .4em;
+
+		font-size: var(--h4);
+	}
+
+	.date-skills-container {
+		flex-flow: column;
+	}
+
+	.date-skills-container p {
+		font-size: var(--h6);
+	}
+
+	.desc-container {
+		margin-top: 1.25em;
 	}
 }
 
@@ -443,13 +475,8 @@ article > div + div a:hover {
 		margin-right: 3em;
 	}
 
-	body > article:first-of-type {
-		margin-top: 1em;
-	}
-
-	.intro {
+	body > div > article:first-of-type {
 		margin-top: 15em;
-		margin-bottom: 8em;
 		width: 70%;
 	}
 
@@ -458,16 +485,76 @@ article > div + div a:hover {
 		letter-spacing: 1px;
 	}
 
+	body > div > article:not(:first-of-type) {
+		margin-top: 8em;
+	}
+
 	.skills > section > div {
 		flex: 50%;
 		margin-bottom: 5em;
 	}
 
-	body > article:first-of-type:not([class="intro"]) {
+	.skills h3 {
+		font-size: var(--h4);
+		--main-font-wght: 400;
+	}
+
+	.skills p {
+		font-size: var(--p);
+		--main-font-wght: 350;
+	}
+
+	.projects {
+		width: 70%;
+	}
+
+	.project {
+		display: grid;
+		grid-template-columns: 1fr 5fr;
+		grid-template-rows: auto auto;
+
+		margin-top: 6em;
+	}
+
+	.project:first-of-type {
+		margin-top: 4em;
+	}
+
+	.project:last-of-type {
+		margin-bottom: 6em;
+	}
+
+	.thumb {
+		height: 250px;
+		width: 250px;
+	}
+
+	.info-container {
+		margin-left: 2.5em;
+	}
+
+	.info-container > .date-skills-container {
+		margin-top: 3.5em;
+		justify-self: center;
+	}
+
+	.date-skills-container p {
+		font-size: var(--h5);
+	}
+
+	.desc-container {
+		margin-top: 2em;
+	}
+
+	.desc-container p {
+		font-size: var(--h6);
+	}
+
+	body > article:first-of-type:not(.intro) {
 		margin-top: 12em;
 	}
 
-	body > article:not([class="intro"]) {
+	body > article:not(.intro) {
 		margin: 0 auto;
 		margin-top: 8em;
 		max-width: 100%;
@@ -496,21 +583,11 @@ article > div + div a:hover {
 		letter-spacing: 2px;
 	}
 
-	body > article:not([class="intro"]) h2 + p {
+	body > article:not(.intro) h2 + p {
 		margin-top: 3em;
 		width: 50%;
     letter-spacing: 1px;
     line-height: 2em;
-	}
-
-	article > article:first-of-type {
-		margin-top: 10em;
-	}
-
-	article > div + div {
-		min-width: 50%;
-		max-width: 50%;
-		text-align: left;
 	}
 
 	article > div + div h3 a {
@@ -519,16 +596,5 @@ article > div + div a:hover {
 
 	article > div + div h4 {
 		font-size: var(--h5);
-	}
-
-	article > div + div p {
-		margin-top: 2em;
-	}
-
-	.thumb {
-		margin-left: 2em;
-		margin-right: 2em;
-		width: 300px;
-		height: 300px;
 	}
 }
