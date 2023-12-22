@@ -116,10 +116,11 @@ nav > h1 {
 }
 
 nav > ul a,
-nav > ul a:link,
-nav > ul a:visited,
+nav > ul a:active,
+nav > ul a:focus,
 nav > ul a:hover,
-nav > ul a:active {
+nav > ul a:link,
+nav > ul a:visited {
 	padding: 0 0.4em;
 
 	color: var(--font-color);
@@ -141,6 +142,12 @@ nav > ul li::after {
 	height: 2px;
 	background: var(--font-color);
 	transition: width 0.3s;
+}
+
+nav > ul li:has(a:active)::after,
+nav > ul li:has(a:focus)::after {
+	width: 100%;
+	transition: width 0s;
 }
 
 nav > ul li:hover::after {
@@ -255,7 +262,7 @@ article > section {
 	width: 100px;
 	height: 100px;
 	/*clip-path: polygon(50% 2%, 0% 70%, 100% 70%);*/
-	background: var(--font-color);
+	/* background: var(--font-color); */
 	transition: transform 1s;
 }
 
@@ -275,9 +282,12 @@ article > section {
 	text-align: center;
 }
 
+.thumb:has(a:active) .overlay,
+.thumb:has(a:focus) .overlay,
 .thumb:hover .overlay {
 	display: block;
 	background: var(--overlay-color);
+	border: 3px solid var(--accent-color);
 }
 
 .thumb-txt {
@@ -325,7 +335,8 @@ article > section {
 	text-decoration: none;
 }
 
-.info-container h3 a:hover,
+.info-container a:active,
+.info-container a:focus,
 .info-container a:hover {
 	color: var(--main-color);
 	background-color: var(--accent-color);
