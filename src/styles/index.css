@@ -301,6 +301,7 @@ article > section {
 	border-top: 2px solid var(--accent-color);
 	border-bottom: 2px solid var(--accent-color);
 
+	font-size: var(--base-size);
 	text-transform: uppercase;
 }
 
