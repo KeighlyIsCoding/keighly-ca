@@ -518,7 +518,7 @@ article > section {
 	}
 
 	.skills p {
-		font-size: var(--p);
+		font-size: var(--h6);
 		--main-font-wght: 350;
 	}
 
