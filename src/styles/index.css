@@ -27,9 +27,11 @@
 	--main-font-fallback: sans-serif;
 	/* --accent-font: */
 	--main-font-wght: 500;
-	--base-size: 0.79rem;
+
+	--base-size: 0.701rem;
 	--type-scale: 1.125; /* Screen Sizes | L - Major 3rd - 1.25 | M - 1.2 Minor 3rd | S - 1.125 Major 2nd */
-	--h6: calc(var(--base-size) * var(--type-scale));
+	--p: calc(var(--base-size) * var(--type-scale));
+	--h6: calc(var(--p) * var(--type-scale));
 	--h5: calc(var(--h6) * var(--type-scale));
 	--h4: calc(var(--h5) * var(--type-scale));
 	--h3: calc(var(--h4) * var(--type-scale));
@@ -59,7 +61,7 @@ h5 {
 }
 
 p {
-	font-size: var(--base-size);
+	font-size: var(--p);
 }
 
 /* Reset, Border-Box, & Font-Var-Set */
@@ -125,7 +127,7 @@ nav > ul a:visited {
 
 	color: var(--font-color);
 	text-decoration: none;
-	font-size: var(--base-size);
+	font-size: var(--p);
 	--main-font-wght: 650;
 	letter-spacing: 3px;
 }
@@ -364,7 +366,7 @@ article > section {
 */
 @media screen and (min-width: 650px) {
 	:root {
-		--base-size: .90rem;
+		--base-size: .75rem;
 		--type-scale: 1.2;
 	}
 
@@ -438,6 +440,10 @@ article > section {
 		width: 150px;
 	}
 
+	.thumb-txt {
+		font-size: var(--p);
+	}
+
 	.info-container h3 {
 		margin-top: .4em;
 
@@ -462,7 +468,7 @@ article > section {
 */
 @media screen and (min-width: 1000px) {
 	:root {
-		--base-size: 0.90rem;
+		--base-size: .75rem;
 		--type-scale: 1.2;
 	}
 
@@ -538,6 +544,10 @@ article > section {
 	.thumb {
 		height: 250px;
 		width: 250px;
+	}
+
+	.thumb-txt {
+		font-size: var(--h5);
 	}
 
 	.info-container {
