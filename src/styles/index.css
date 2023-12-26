@@ -500,6 +500,8 @@ article > section {
 
 	.intro p {
 		margin-bottom: 1em;
+
+		font-size: var(--h6);
 		letter-spacing: 1px;
 	}
 
