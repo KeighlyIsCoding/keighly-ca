@@ -40,15 +40,18 @@
 }
 
 /* Assign typescale sizes */
-h1 {
+h1,
+nav > .title {
 	font-size: var(--h1);
 }
 
-h2 {
+h2,
+.intro > .subtitle {
 	font-size: var(--h2);
 }
 
-h3 {
+h3,
+.intro > .contact {
 	font-size: var(--h3);
 }
 
@@ -110,7 +113,8 @@ nav {
 	text-transform: uppercase;
 }
 
-nav > h1 {
+nav > .title {
+	margin-top: 0.7em;
 	margin-bottom: 0.75em;
 
 	text-transform: uppercase;
@@ -168,7 +172,8 @@ nav > ul li:hover::after {
 	letter-spacing: 2px;
 }
 
-.intro h2 {
+.intro h2,
+.intro .subtitle {
 	margin-bottom: 0.3em;
 
 	font-size: var(--h4);
@@ -176,7 +181,8 @@ nav > ul li:hover::after {
 	letter-spacing: 2px;
 }
 
-.intro h3 {
+.intro h3,
+.intro .contact {
 	margin-bottom: 2em;
 
 	font-size: var(--h5);
@@ -184,7 +190,7 @@ nav > ul li:hover::after {
 	letter-spacing: 1px;
 }
 
-.intro p {
+.intro p:not(.subtitle):not(.contact) {
 	margin-bottom: 0.5em;
 
 	letter-spacing: 1px;
@@ -479,7 +485,7 @@ article > section {
 		padding: .75em 0;
 	}
 
-	nav > h1 {
+	nav > .title {
 		margin-left: 1em;
 		letter-spacing: 5px;
 	}
