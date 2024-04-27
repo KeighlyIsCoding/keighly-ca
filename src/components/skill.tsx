@@ -8,7 +8,7 @@ export const Skill = ({ title, skills }: SkillProps) => {
     <div>
       <h3>{title}</h3>
       {skills.map((item) =>
-        <p>{item}</p>
+        <p key={`skill-${item}`}>{item}</p>
       )}
     </div>
   );

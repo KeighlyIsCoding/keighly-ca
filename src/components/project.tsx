@@ -9,8 +9,6 @@ interface ProjectProps {
 
 export const Project = ({ title, link, date, skills, description, image }: ProjectProps) => {
   const skillList = skills.join(', ');
-  const imgSrc = `assets/thumbnails/${image}.png`;
-  console.log(imgSrc)
   return (
     <>
       <article className='project'>
@@ -30,8 +28,8 @@ export const Project = ({ title, link, date, skills, description, image }: Proje
           </div>
         </div>
         <div className='desc-container'>
-          {description.map((item) =>
-            <p>{item}</p>
+          {description.map((item, i) =>
+            <p key={`description-${i}`}>{item}</p>
           )}
         </div>
       </article>
