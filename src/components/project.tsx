@@ -21,7 +21,9 @@ export const Project = ({ title, link, date, skills, description, image }: Proje
           </a>
         </div>
         <div className='info-container'>
-          <h3><a href={link} target='_blank'>{title}</a></h3>
+          <div>
+            <h3><a href={link} target='_blank'>{title}</a></h3>
+          </div>
           <div className='date-skills-container'>
             <p>{date}</p>
             <p>{skillList}</p>

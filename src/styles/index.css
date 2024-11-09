@@ -323,6 +323,7 @@ article > section {
 
 .info-container h3 {
 	margin-top: .4em;
+	margin-bottom: .4em;
 	align-self: flex-start;
 	text-align: left;
 	font-size: var(--h6);
@@ -337,18 +338,25 @@ article > section {
 	line-height: 1.8em;
 }
 
+.info-container:has(a) > div:first-child {
+	border: 2px solid var(--accent-color);
+}
+
 .info-container a {
 	padding: 0.3em;
-	border: 2px solid var(--accent-color);
 	color: var(--accent-color);
 	text-decoration: none;
 }
 
-.info-container a:active,
-.info-container a:focus,
-.info-container a:hover {
-	color: var(--main-color);
+.info-container:has(a:active) > div:first-child,
+.info-container:has(a:focus) > div:first-child,
+.info-container:has(a) > div:first-child:hover {
 	background-color: var(--accent-color);
+}
+.info-container:has(a) > div:first-child a:active,
+.info-container:has(a) > div:first-child a:focus,
+.info-container:has(a) > div:first-child:hover a {
+	color: var(--main-color);
 }
 
 .desc-container {

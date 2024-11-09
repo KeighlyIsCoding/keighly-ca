@@ -32,7 +32,7 @@ export const Projects = () => {
         <>
           <Project
             title={'Aquarium Management API'}
-            link={'https://github.com/ALostCAWs/aquarium-management-api'}
+            link={'https://github.com/KeighlyIsCoding/aquarium-management-api'}
             date={'Jan 2024 - Present'}
             skills={['TypeScript', 'Node JS', 'Express', 'DynamoDB', 'AWS Lambda']}
             description={aquariumAPIDescription}
@@ -40,7 +40,7 @@ export const Projects = () => {
           />
           <Project
             title={'Aquarium Management'}
-            link={'https://github.com/ALostCAWs/aquarium-management'}
+            link={'https://github.com/KeighlyIsCoding/aquarium-management'}
             date={'Jan 2024 - Present'}
             skills={['JavaScript', 'Vue JS 2', 'HTML/CSS', 'API Communication']}
             description={aquariumDescription}
@@ -48,7 +48,7 @@ export const Projects = () => {
           />
           <Project
             title={'Nonogram'}
-            link={'https://github.com/ALostCAWs/nonogram'}
+            link={'https://github.com/KeighlyIsCoding/nonogram'}
             date={'Aug 2023 - Present'}
             skills={['TypeScript', 'React', 'HTML/CSS']}
             description={nonogramDescription}
@@ -56,7 +56,7 @@ export const Projects = () => {
           />
           <Project
             title={'Nonogram API'}
-            link={'https://github.com/ALostCAWs/nonogram-api'}
+            link={'https://github.com/KeighlyIsCoding/nonogram-api'}
             date={'Nov 2023 - Present'}
             skills={['TypeScript', 'Node JS', 'Express']}
             description={nonogramAPIDescription}
@@ -64,7 +64,7 @@ export const Projects = () => {
           />
           <Project
             title={'Keighly.ca'}
-            link={'https://github.com/ALostCAWs/keighly-ca'}
+            link={'https://github.com/KeighlyIsCoding/keighly-ca'}
             date={'Dec 2023'}
             skills={['TypeScript', 'React', 'HTML/CSS', 'Vite', 'ESLint']}
             description={keighlyCADescription}
